@@ -108,7 +108,6 @@ class DeviceFragment : Fragment() {
     }
 
     fun isManaged(): Boolean {
-manag
         val admins = devicePolicyManager.getActiveAdmins();
         if (admins == null) return false;
         for (admin in admins) {
