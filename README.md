@@ -21,7 +21,7 @@
     <img src="img/sidebar.png" width=400/>
 </p>
 
-p align='center'>
+<p align='center'>
     <img src="img/mdm.png" width=400/>
 </p>
 
