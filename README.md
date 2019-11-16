@@ -12,6 +12,9 @@
 * Run app from android studio
 
 ## Screenshots
+<p align='center'>
+    <img src="img/hub.png" width=400/>
+</p>
 
 <p align='center'>
     <img src="img/ble.png" width=400/>
