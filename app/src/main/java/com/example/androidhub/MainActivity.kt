@@ -38,9 +38,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setNavigationItemSelectedListener { item: MenuItem ->
-            Toast.makeText(this, "CLicked: $item", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$item", Toast.LENGTH_SHORT).show()
             val fragment = supportFragmentManager.fragments.first().childFragmentManager.fragments.firstOrNull() as DeviceFragment
             fragment.refreshData(item)
+            drawerLayout.closeDrawers()
             true
         }
     }
