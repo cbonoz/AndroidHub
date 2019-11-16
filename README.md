@@ -1,5 +1,5 @@
 <p align='center'>
-    <img src="img/android_hub.png"/>
+    <img src="img/android_hub.png" width=200/>
 </p>
 
 # AndroidHub
