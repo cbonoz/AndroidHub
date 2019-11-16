@@ -2,6 +2,7 @@ package com.example.androidhub.ui.home
 
 import android.app.admin.DevicePolicyManager
 import android.bluetooth.BluetoothAdapter
+import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.LocationManager
@@ -106,7 +107,28 @@ class DeviceFragment : Fragment() {
         versionText.text = "Android SDK: $sdkVersion ($release)"
     }
 
+    fun isManaged(): Boolean {
+manag
+        val admins = devicePolicyManager.getActiveAdmins();
+        if (admins == null) return false;
+        for (admin in admins) {
+            val adminPackageName = admin.getPackageName();
+            if (devicePolicyManager.isDeviceOwnerApp(adminPackageName)
+                || devicePolicyManager.isProfileOwnerApp(adminPackageName)
+            ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private fun getMdmStatus() {
+        if (isManaged()) {
+            infoText.text = "Device or current profile is currently managed"
+        } else {
+            infoText.text = "MDM currently disabled"
+        }
 
     }
 
@@ -136,6 +158,7 @@ class DeviceFragment : Fragment() {
     private fun getAntiVirus() {
         val antivirusAppList = ArrayList<String>()
         infoText.setText("No antivirus software detected")
+        // TODO: Get an approved anti virus list and verify if present.
         for (app in antivirusAppList) {
             //            try {
             //                packageManager.getPackageInfo(app, PackageManager.GET_ACTIVITIES)
