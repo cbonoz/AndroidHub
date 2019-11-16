@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/zzz_home"-->
+<!--            android:title="@string/menu_home" />-->
+        <item
+            android:id="@+id/nav_lte"
+            android:icon="@drawable/zzz_signal"
+            android:title="LTE"/>
+        <item
+            android:id="@+id/nav_ble"
+            android:icon="@drawable/zzz_bluetooth"
+            android:title="Bluetooth"/>
+        <item
+            android:id="@+id/nav_nfc"
+            android:icon="@drawable/zzz_nfc"
+            android:title="NFC"/>
+        <item
+            android:id="@+id/nav_vpn"
+            android:icon="@drawable/zzz_server_network"
+            android:title="VPN"/>
+        <item
+            android:id="@+id/nav_wifi"
+            android:icon="@drawable/zzz_wifi"
+            android:title="WIFI"/>
+        <item
+            android:id="@+id/nav_encryption"
+            android:icon="@drawable/zzz_lock"
+            android:title="Encryption"/>
+        <item
+            android:id="@+id/nav_gps"
+            android:icon="@drawable/zzz_crosshairs_gps"
+            android:title="GPS"/>
+        <item
+            android:id="@+id/nav_antivirus"
+            android:icon="@drawable/zzz_shield"
+            android:title="Antivirus"/>
+        <item
+            android:id="@+id/nav_mdm"
+            android:icon="@drawable/zzz_compass"
+            android:title="MDM Status"/>
+    </group>
+
+<!--    <item android:title="Communicate">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/ic_menu_share"-->
+<!--                android:title="@string/menu_share" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_send"-->
+<!--                android:icon="@drawable/ic_menu_send"-->
+<!--                android:title="@string/menu_send" />-->
+<!--        </menu>-->
+<!--    </item>-->
+
+</menu>
